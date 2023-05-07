@@ -1,0 +1,7 @@
+require("jbloom.options")
+require("jbloom.colorscheme")
+require("jbloom.packer")
+require("lsp")
+require("jbloom.lualine")
+require("jbloom.telescope")
+require("jbloom.nvim-tree")

@@ -1,0 +1,22 @@
+# .emacs.d
+
+May not be the configs you expected
+This config is setup mainly for JS/Typescript, C/C++ and Go
+
+** How to install and use if you still wanted to try it 
+- Remove or rename ".emacs.d" from your home directory `"~/"` and clone repo
+**** If new setup script is used, above step is completed by the script
+** When emacs is first opened the following lines in "init.el" will need to be evaluated `C-x C-e` or `C-M-x`
+  - `(use-package all-the-icons)` on line 38
+  - `(use-package exec-path-from-shell ...)` lines 40 - 43
+  - `(load "~/.emacs.d/init-packages.el")` on line 49  
+
+Although the errors in emacs will tell you this I hope this makes the install easier.
+
+**** First time this script runs it will be slow to install all packages, please be patient
+
+The rest of the packages should now install from [melpa](https://melpa.org/) and [elpa](https://elpa.gnu.org/) without issue. 
+
+*** This config is not complete and has some parts not working/errors
+- auto tangle
+- smartparens

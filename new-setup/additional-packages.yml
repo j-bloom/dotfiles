@@ -1,0 +1,118 @@
+---
+
+- hosts: localhost
+  become: true
+  tasks:
+
+#####      Uncomment if i3wm is desired       #####
+- name: Install i3 in Debian based system
+  apt:
+    name: i3
+  when: ansible_facts['os_family'] == "Debian" or ansible_facts['os_family'] == "Ubuntu"
+
+- name: Install curl in Debian based system
+  apt:
+    name: curl
+  when: ansible_facts['os_family'] == "Debian" or ansible_facts['os_family'] == "Ubuntu"
+
+- name: Install golang in Debian based system
+  apt:
+    name: golang
+  when: ansible_facts['os_family'] == "Debian" or ansible_facts['os_family'] == "Ubuntu"
+
+- name: Install emacs in Debian based system
+  apt:
+    name: emacs
+  when: ansible_facts['os_family'] == "Debian" or ansible_facts['os_family'] == "Ubuntu"
+
+- name: Install ripgrep  in Debian based system
+  apt:
+    name: ripgrep
+  when: ansible_facts['os_family'] == "Debian" or ansible_facts['os_family'] == "Ubuntu"
+
+- name: Install fd-find in Debian based system
+  apt:
+    name: fd-find
+  when: ansible_facts['os_family'] == "Debian" or ansible_facts['os_family'] == "Ubuntu"
+
+- name: Install silversearcher-ag in Debian based system
+  apt:
+    name: silversearcher-ag
+  when: ansible_facts['os_family'] == "Debian" or ansible_facts['os_family'] == "Ubuntu"
+
+- name: Install GIMP in Debian based system
+  apt:
+    name: gimp 
+  when: ansible_facts['os_family'] == "Debian" or ansible_facts['os_family'] == "Ubuntu"
+
+- name: install OBS Studio and support packages in Debian based system
+  apt:
+   # name: "{{ v4l2loopback-dkms, ffmpeg, obs-studio }}"
+    name:
+      - v4l2loopback-dkms
+      - ffmpeg
+      - obs-studio
+  when: ansible_facts['os_family'] == "Debian" or ansible_facts['os_family'] == "Ubuntu"
+
+- name: install VLC media player in Debian based system
+  apt:
+    name: vlc
+  when: ansible_facts['os_family'] == "Debian" or ansible_facts['os_family'] == "Ubuntu"
+
+#####      Uncomment if i3wm is desired       #####
+- name: Install i3 in Fedora based system
+  dnf:
+    name: i3
+  when: ansible_facts['os_family'] == "Fedora"
+
+- name: Install curl in Fedora based system
+  dnf:
+    name: curl
+  when: ansible_facts['os_family'] == "Fedora"
+
+- name: Install clang in Fedora based system
+  dnf:
+    name: clang
+  when: ansible_facts['os_family'] == "Fedora"
+
+- name: Install golang in Fedora based system
+  dnf:
+    name: golang
+  when: ansible_facts['os_family'] == "Fedora"
+
+- name: Install emacs in Fedora based system
+  dnf:
+    name: emacs
+  when: ansible_facts['os_family'] == "Fedora"
+
+- name: Install ripgrep  in Fedora based system
+  dnf:
+    name: ripgrep
+  when: ansible_facts['os_family'] == "Fedora"
+
+- name: Install fd-find in Fedora based system
+  dnf:
+    name: fd-find
+  when: ansible_facts['os_family'] == "Fedora"
+
+- name: Install silversearcher-ag in Fedora based system
+  dnf:
+    name: silversearcher-ag
+  when: ansible_facts['os_family'] == "Fedora"
+
+- name: Install GIMP in Fedora based system
+  dnf:
+    name: gimp
+  when: ansible_facts['os_family'] == "Fedora"
+
+- name: install OBS Studio and support packages in Fedora based system
+  dnf:
+    name: 
+      - v4l2loopback-dkms
+      - obs-studio
+  when: ansible_facts['os_family'] == "Fedora"
+
+- name: install VLC media player in Fedora based system
+  dnf:
+    name: vlc
+  when: ansible_facts['os_family'] == "Fedora"
