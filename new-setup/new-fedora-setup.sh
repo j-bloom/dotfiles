@@ -10,11 +10,11 @@ sudo dnf autoremove -y
 wait
 
 #Update dnf.conf file
-echo "#Added for speed:" | sudo tee /etc/dnf/dnf.conf
-echo "fastestmirror=True" | sudo tee /etc/dnf/dnf.conf
-echo "max_parallel_downloads=10" | sudo tee /etc/dnf/dnf.conf
-echo "defaultyes=True" | sudo tee /etc/dnf/dnf.conf
-echo "keepcache=True" | sudo tee /etc/dnf/dnf.conf
+echo "#Added for speed:" | sudo tee -a/etc/dnf/dnf.conf
+echo "fastestmirror=True" | sudo tee -a/etc/dnf/dnf.conf
+echo "max_parallel_downloads=10" | sudo tee -a/etc/dnf/dnf.conf
+echo "defaultyes=True" | sudo tee -a/etc/dnf/dnf.conf
+echo "keepcache=True" | sudo tee -a/etc/dnf/dnf.conf
 
 #Install free/non-free repos and media packages
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm 

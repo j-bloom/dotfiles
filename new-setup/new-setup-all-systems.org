@@ -70,11 +70,11 @@
 *** Update dnf.conf file
 #+begin_src shell :tangle new-fedora-setup.sh
   #Update dnf.conf file
-  echo "#Added for speed:" | sudo tee /etc/dnf/dnf.conf
-  echo "fastestmirror=True" | sudo tee /etc/dnf/dnf.conf
-  echo "max_parallel_downloads=10" | sudo tee /etc/dnf/dnf.conf
-  echo "defaultyes=True" | sudo tee /etc/dnf/dnf.conf
-  echo "keepcache=True" | sudo tee /etc/dnf/dnf.conf
+  echo "#Added for speed:" | sudo tee -a/etc/dnf/dnf.conf
+  echo "fastestmirror=True" | sudo tee -a/etc/dnf/dnf.conf
+  echo "max_parallel_downloads=10" | sudo tee -a/etc/dnf/dnf.conf
+  echo "defaultyes=True" | sudo tee -a/etc/dnf/dnf.conf
+  echo "keepcache=True" | sudo tee -a/etc/dnf/dnf.conf
 #+end_src
 
 *** Additional repo setup
